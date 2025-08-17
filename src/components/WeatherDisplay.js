@@ -1,0 +1,21 @@
+import React from "react";
+import './../styles/App.css';
+
+function WeatherDisplay({weather}){
+    const {temperature, conditions} = weather;
+
+    const tempStyle = {
+        color: temperature > 20 ? "red" : "blue"
+    }
+
+    return (
+        <div>
+            <p>
+                Temperature: <span style={tempStyle}>{temperature}</span>
+            </p>
+            <p>Conditions: {conditions}</p>
+        </div>
+    )
+
+}
+export default WeatherDisplay;
